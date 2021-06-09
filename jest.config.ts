@@ -4,5 +4,6 @@ export default {
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
-  transform: { '.+\\.ts$': 'ts-jest' }
+  transform: { '.+\\.ts$': 'ts-jest' },
+  clearMocks: true
 }
