@@ -7,7 +7,7 @@
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:silent": "jest --passWithNoTests --no-cache --silent",
     "test:unit": "jest --passWithNoTests --no-cache --silent",
-    "test:staged": "npm test -- --findRelatedTest",
+    "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
