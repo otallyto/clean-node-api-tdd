@@ -5,5 +5,6 @@ export default {
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: { '.+\\.ts$': 'ts-jest' },
+  preset: '@shelf/jest-mongodb',
   clearMocks: true
 }
