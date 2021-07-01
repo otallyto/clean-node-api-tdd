@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../app/app'
+import app from '../config/app'
 
 describe('CORS Middleware', () => {
   app.get('/cors', (req, res) => {

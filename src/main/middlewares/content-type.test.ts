@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../app/app'
+import app from '../config/app'
 
 describe('Content Type Middleware', () => {
   app.get('/test_content_type', (req, res) => {
