@@ -5,7 +5,7 @@ describe('CORS Middleware', () => {
   app.get('/cors', (req, res) => {
     res.send()
   })
-  xit('Should enable CORS', async () => {
+  it('Should enable CORS', async () => {
     await request(app)
       .get('/cors')
       .expect('access-control-allow-origin', '*')

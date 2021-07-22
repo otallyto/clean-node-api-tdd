@@ -72,7 +72,7 @@ describe('logErrorRepositoryStubController Decorator', () => {
     expect(httpResponse).toEqual({ body: { name: 'Tallyto' }, statusCode: 200 })
   })
 
-  xit('Should call LogErrorRepository with correct error if controller returns a server error', async () => {
+  it('Should call LogErrorRepository with correct error if controller returns a server error', async () => {
     const { sut, controllerStub, logErrorRepositoryStub } = makeSut()
     const fakeError = new Error()
     fakeError.stack = 'any_stack'
