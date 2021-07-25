@@ -13,13 +13,13 @@ describe('SingUp Routes', () => {
   })
 
   beforeEach(async () => {
-    const accountCollection = MongoHelper.getColletion('accounts')
+    const accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
 
-  test('Should return an accoutn on succes', async () => {
+  test('Should return an account on success', async () => {
     await request(app)
-      .post('/api/singup').send({
+      .post('/api/signup').send({
         name: 'Tallyto',
         email: 'rodrigues.tallyto@hotmail.com',
         password: '123',
