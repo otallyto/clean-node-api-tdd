@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests --detectOpenHandles --no-cache  --runInBand",
+    "cov": "jest --passWithNoTests --detectOpenHandles --no-cache  --runInBand --coverage",
     "test:silent": "jest --passWithNoTests --no-cache --silent",
     "test:unit": "jest --passWithNoTests --no-cache --silent",
     "test:staged": "npm test -- --findRelatedTests",
