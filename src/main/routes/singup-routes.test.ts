@@ -19,11 +19,21 @@ describe('SingUp Routes', () => {
 
   test('Should return an account on success', async () => {
     await request(app)
-      .post('/api/signup').send({
+      .post('/api/singup').send({
         name: 'Tallyto',
         email: 'rodrigues.tallyto@hotmail.com',
         password: '123',
         passwordConfirmation: '123'
       }).expect(200)
+  })
+
+  test('Should return an account on success', async () => {
+    await request(app)
+      .post('/api/singup').send({
+        name: 'Tallyto',
+        email: 'rodrigues.tallyto@hotmail.com',
+        password: '123',
+        passwordConfirmation: 'invaid_passwordConfirmation'
+      }).expect(400)
   })
 })
