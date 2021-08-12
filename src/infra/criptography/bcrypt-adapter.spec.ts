@@ -18,13 +18,13 @@ describe('Bcrypt Adapter', () => {
     expect(hashSpy).toHaveBeenCalledWith('any_value', salt)
   })
 
-  test('Should retun a hash on success', async () => {
+  test('Should return a hash on success', async () => {
     const sut = makeSut()
     const hash = await sut.encrypt('any_value')
     expect(hash).toBe('hash')
   })
 
-  test('Should throw if bcrypt trhows', async () => {
+  test('Should throw if bcrypt throws', async () => {
     const sut = makeSut()
     // @ts-expect-error -> ignorar erro de compilacao
     jest.spyOn(bcrypt, 'hash').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
